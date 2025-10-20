@@ -45,7 +45,7 @@ export const TermsPage: React.FC = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-neutral-900 mb-4">4. Payment Terms</h2>
               <p className="text-neutral-700 mb-4">
-                All fees are stated in USD and are non-refundable unless otherwise specified. You agree to pay all charges incurred by you or on your behalf through the service, at the prices in effect when such charges are incurred.
+                All fees are stated in CAD and are non-refundable unless otherwise specified. You agree to pay all charges incurred by you or on your behalf through the service, at the prices in effect when such charges are incurred.
               </p>
             </section>
 

@@ -83,7 +83,7 @@ export const BundlePurchasePage: React.FC = () => {
           </div>
           <h1 className="text-3xl font-bold text-neutral-900 mb-4">Bundle Order Confirmed!</h1>
           <p className="text-lg text-neutral-600 mb-6">
-            You're saving ${bundle.savings}/month with your bundle package!
+            You're saving CAD {bundle.savings}/month with your bundle package!
           </p>
           <div className="bg-neutral-50 rounded-lg p-6 mb-6 text-left">
             <h3 className="font-semibold text-neutral-900 mb-3">What Happens Next:</h3>
@@ -135,17 +135,17 @@ export const BundlePurchasePage: React.FC = () => {
               <div className="bg-gradient-to-br from-primary-600 to-secondary-600 rounded-xl p-6 text-white mb-6">
                 <div className="flex items-center gap-2 mb-4">
                   <TrendingDown className="w-6 h-6" />
-                  <span className="text-lg font-semibold">Save ${bundle.savings}/month</span>
+                  <span className="text-lg font-semibold">Save CAD {bundle.savings}/month</span>
                 </div>
-                <p className="text-4xl font-bold mb-2">${bundle.total}<span className="text-xl font-normal">/month</span></p>
-                <p className="text-white/80 line-through text-lg">Regular price: ${regularTotal}/month</p>
+                <p className="text-4xl font-bold mb-2">CAD {bundle.total}<span className="text-xl font-normal">/month</span></p>
+                <p className="text-white/80 line-through text-lg">Regular price: CAD {regularTotal}/month</p>
               </div>
 
               <div className="space-y-4 mb-6">
                 <div className="bg-neutral-50 rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-semibold text-neutral-900">{bundle.internet} Internet</span>
-                    <span className="text-neutral-700">${bundle.internetPrice}</span>
+                    <span className="text-neutral-700">CAD {bundle.internetPrice}</span>
                   </div>
                   <ul className="space-y-1 text-sm text-neutral-600">
                     <li className="flex items-start gap-2">
@@ -167,7 +167,7 @@ export const BundlePurchasePage: React.FC = () => {
                   <div className="bg-neutral-50 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-semibold text-neutral-900">Premium IPTV Streaming</span>
-                      <span className="text-neutral-700">${bundle.streamingPrice}</span>
+                      <span className="text-neutral-700">CAD {bundle.streamingPrice}</span>
                     </div>
                     <ul className="space-y-1 text-sm text-neutral-600">
                       <li className="flex items-start gap-2">
@@ -190,16 +190,16 @@ export const BundlePurchasePage: React.FC = () => {
               <div className="border-t border-neutral-200 pt-6 space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-neutral-600">Subtotal</span>
-                  <span className="font-semibold">${regularTotal}</span>
+                  <span className="font-semibold">CAD {regularTotal}</span>
                 </div>
                 <div className="flex justify-between items-center text-green-600">
                   <span className="font-semibold">Bundle Savings (10%)</span>
-                  <span className="font-semibold">-${bundle.savings}</span>
+                  <span className="font-semibold">-CAD {bundle.savings}</span>
                 </div>
                 {couponApplied && (
                   <div className="flex justify-between items-center text-green-600">
                     <span className="font-semibold">Coupon Discount ({couponDiscount}%)</span>
-                    <span className="font-semibold">-${(bundle.total * couponDiscount / 100).toFixed(0)}</span>
+                    <span className="font-semibold">-CAD {(bundle.total * couponDiscount / 100).toFixed(0)}</span>
                   </div>
                 )}
                 <div className="flex justify-between items-center">
@@ -208,14 +208,14 @@ export const BundlePurchasePage: React.FC = () => {
                 </div>
                 <div className="flex justify-between items-center pt-3 border-t border-neutral-200">
                   <span className="text-lg font-bold">Total Due Today</span>
-                  <span className="text-2xl font-bold text-primary-600">${calculateFinalTotal()}</span>
+                  <span className="text-2xl font-bold text-primary-600">CAD {calculateFinalTotal()}</span>
                 </div>
               </div>
 
               <div className="mt-6 p-4 bg-green-50 rounded-lg">
                 <div className="flex items-center gap-2 text-green-800">
                   <TrendingDown className="w-5 h-5" />
-                  <p className="text-sm font-semibold">You're saving ${bundle.savings * 12}/year with this bundle!</p>
+                  <p className="text-sm font-semibold">You're saving CAD {bundle.savings * 12}/year with this bundle!</p>
                 </div>
               </div>
             </Card>
@@ -357,7 +357,7 @@ export const BundlePurchasePage: React.FC = () => {
                   variant="primary"
                   className="w-full hover:shadow-glow-primary transition-all duration-300 animate-pulse-glow"
                 >
-                  Complete Bundle Purchase - ${calculateFinalTotal()}/mo
+                  Complete Bundle Purchase - CAD {calculateFinalTotal()}/mo
                 </Button>
 
                 <p className="text-xs text-center text-neutral-500">
@@ -372,7 +372,7 @@ export const BundlePurchasePage: React.FC = () => {
               <ul className="space-y-2 text-sm text-neutral-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Save ${bundle.savings} every month</span>
+                  <span>Save CAD {bundle.savings} every month</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />

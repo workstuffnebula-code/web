@@ -106,7 +106,7 @@ export const BundleBuilder: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <div>
                           <div className="font-medium text-neutral-900">1-Month IPTV Streaming</div>
-                          <div className="text-sm text-neutral-600">${STREAMING_PRICE.toFixed(2)}/month</div>
+                          <div className="text-sm text-neutral-600">CAD {STREAMING_PRICE.toFixed(2)}/month</div>
                         </div>
                         <div className={`w-6 h-6 rounded border-2 flex items-center justify-center transition-all ${
                           includeStreaming
@@ -141,7 +141,7 @@ export const BundleBuilder: React.FC = () => {
                             <span className="text-sm text-neutral-700">{selectedPlan.label}</span>
                           </div>
                           <span className="text-sm font-semibold text-neutral-900">
-                            ${selectedPlan.price.toFixed(2)}
+                            CAD {selectedPlan.price.toFixed(2)}
                           </span>
                         </div>
                       )}
@@ -152,7 +152,7 @@ export const BundleBuilder: React.FC = () => {
                             <span className="text-sm text-neutral-700">IPTV Streaming</span>
                           </div>
                           <span className="text-sm font-semibold text-neutral-900">
-                            ${STREAMING_PRICE.toFixed(2)}
+                            CAD {STREAMING_PRICE.toFixed(2)}
                           </span>
                         </div>
                       )}
@@ -162,7 +162,7 @@ export const BundleBuilder: React.FC = () => {
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-sm text-primary-600 font-medium">Bundle Savings (10%)</span>
                         <span className="text-sm font-semibold text-primary-600">
-                          -${savings.toFixed(2)}
+                          -CAD {savings.toFixed(2)}
                         </span>
                       </div>
                     )}
@@ -172,11 +172,11 @@ export const BundleBuilder: React.FC = () => {
                       <div className="text-right">
                         {savings > 0 && (
                           <div className="text-sm text-neutral-500 line-through">
-                            ${totalPrice.toFixed(2)}
+                            CAD {totalPrice.toFixed(2)}
                           </div>
                         )}
                         <div className="text-2xl font-bold text-primary-600">
-                          ${finalPrice.toFixed(2)}
+                          CAD {finalPrice.toFixed(2)}
                         </div>
                       </div>
                     </div>
@@ -212,7 +212,7 @@ export const BundleBuilder: React.FC = () => {
             {savings > 0 && (
               <div className="mt-6 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-lg p-4 border border-primary-200">
                 <p className="text-center text-sm font-semibold text-primary-700">
-                  You're saving ${savings.toFixed(2)} with this bundle!
+                  You're saving CAD {savings.toFixed(2)} with this bundle!
                 </p>
               </div>
             )}

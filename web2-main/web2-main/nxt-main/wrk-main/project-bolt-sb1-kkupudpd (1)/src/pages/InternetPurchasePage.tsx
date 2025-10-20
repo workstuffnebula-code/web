@@ -17,7 +17,7 @@ const allPlans: PlanDetails[] = [
   {
     name: '3-Day Plan',
     duration: '3 Days',
-    price: '$200',
+    price: 'CAD 200',
     speed: '1 Gigabit',
     features: [
       'Unlimited Data',
@@ -30,7 +30,7 @@ const allPlans: PlanDetails[] = [
   {
     name: '7-Day Plan',
     duration: '7 Days',
-    price: '$350',
+    price: 'CAD 350',
     speed: '1 Gigabit',
     features: [
       'Unlimited Data',
@@ -43,7 +43,7 @@ const allPlans: PlanDetails[] = [
   {
     name: '14-Day Plan',
     duration: '14 Days',
-    price: '$670',
+    price: 'CAD 670',
     speed: '1 Gigabit',
     features: [
       'Unlimited Data',
@@ -56,7 +56,7 @@ const allPlans: PlanDetails[] = [
   {
     name: '30-Day Plan',
     duration: '30 Days',
-    price: '$1,300',
+    price: 'CAD 1,300',
     speed: '1 Gigabit',
     features: [
       'Unlimited Data',
@@ -111,11 +111,11 @@ export const InternetPurchasePage: React.FC = () => {
   };
 
   const calculateTotal = () => {
-    if (!selectedPlan) return '$0';
-    const priceNum = parseFloat(selectedPlan.price.replace('$', '').replace(',', ''));
+    if (!selectedPlan) return 'CAD 0';
+    const priceNum = parseFloat(selectedPlan.price.replace('CAD ', '').replace(',', ''));
     const discountAmount = (priceNum * couponDiscount) / 100;
     const finalPrice = priceNum - discountAmount;
-    return `$${finalPrice.toFixed(0)}`;
+    return `CAD ${finalPrice.toFixed(0)}`;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -272,7 +272,7 @@ export const InternetPurchasePage: React.FC = () => {
                 {couponApplied && (
                   <div className="flex justify-between items-center mb-2 text-green-600">
                     <span className="font-semibold">Coupon Discount ({couponDiscount}%)</span>
-                    <span className="font-semibold">-${(parseFloat(selectedPlan.price.replace('$', '').replace(',', '')) * couponDiscount / 100).toFixed(0)}</span>
+                    <span className="font-semibold">-CAD {(parseFloat(selectedPlan.price.replace('CAD ', '').replace(',', '')) * couponDiscount / 100).toFixed(0)}</span>
                   </div>
                 )}
                 <div className="flex justify-between items-center mb-2">
